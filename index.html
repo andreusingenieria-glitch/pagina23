@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Betonmix | Alquiler de Maquinaria</title>
+  <meta name="description" content="Alquiler de maquinaria pesada: bombas de concreto, mixers, excavadoras, retroexcavadoras, rodillos, plataformas y más. Cotiza por WhatsApp en 1 clic." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--brand:#0ea5e9;}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .glass{backdrop-filter:saturate(180%) blur(10px); background:rgba(255,255,255,0.75)}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-sky-500 text-white font-black">BM</span>
+        <span class="font-extrabold tracking-tight text-slate-900">Betonmix</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#catalogo" class="hover:text-sky-600">Catálogo</a>
+        <a href="#beneficios" class="hover:text-sky-600">Beneficios</a>
+        <a href="#contacto" class="hover:text-sky-600">Contacto</a>
+        <a href="#cotiza" class="px-4 py-2 rounded-xl bg-sky-600 text-white hover:bg-sky-700">Cotizar</a>
+      </nav>
+      <button id="openMenu" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl bg-slate-100">☰</button>
+    </div>
+  </header>
+  
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="fixed inset-0 bg-black/50 hidden">
+    <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 space-y-4">
+      <button id="closeMenu" class="ml-auto text-2xl">×</button>
+      <a href="#catalogo" class="block" onclick="toggleMenu(false)">Catálogo</a>
+      <a href="#beneficios" class="block" onclick="toggleMenu(false)">Beneficios</a>
+      <a href="#contacto" class="block" onclick="toggleMenu(false)">Contacto</a>
+      <a href="#cotiza" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-sky-600 text-white" onclick="toggleMenu(false)">Cotizar</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-sky-100"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-slate-900">Alquiler de maquinaria pesada<br><span class="text-sky-600">rápido, seguro y a precio justo</span></h1>
+        <p class="mt-4 text-lg text-slate-600">Bombas de concreto, mixers, excavadoras, rodillos, plataformas y más. Operación 24/7 bajo demanda. Cobertura Lima — Arequipa — Sur.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#catalogo" class="px-5 py-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800">Ver catálogo</a>
+          <a id="ctaWhats" href="#" target="_blank" class="px-5 py-3 rounded-xl bg-sky-600 text-white hover:bg-sky-700">Cotizar por WhatsApp</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Respuesta promedio &lt; 10 min — Incluye operador, mantenimiento y seguro según equipo.</p>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-3xl bg-gradient-to-tr from-sky-100 to-white border border-sky-200 p-4">
+          <div class="grid grid-cols-2 gap-4 h-full">
+            <div class="rounded-2xl bg-white shadow-sm border p-4 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold">Bomba Telescópica 36 m</h3>
+                <p class="text-sm text-slate-500">Para obras medianas</p>
+              </div>
+              <span class="text-sm font-semibold text-sky-700">Desde S/ 1,800/día</span>
+            </div>
+            <div class="rounded-2xl bg-white shadow-sm border p-4 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold">Bomba Estacionaria</h3>
+                <p class="text-sm text-slate-500">Líneas hasta 400 m</p>
+              </div>
+              <span class="text-sm font-semibold text-sky-700">S/ 30 por m³</span>
+            </div>
+            <div class="rounded-2xl bg-white shadow-sm border p-4 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold">Rodillo Compactador 12T</h3>
+                <p class="text-sm text-slate-500">Vía y plataforma</p>
+              </div>
+              <span class="text-sm font-semibold text-sky-700">Desde S/ 700/día</span>
+            </div>
+            <div class="rounded-2xl bg-white shadow-sm border p-4 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold">Plataforma Elevadora 18 m</h3>
+                <p class="text-sm text-slate-500">Mantenimiento y montaje</p>
+              </div>
+              <span class="text-sm font-semibold text-sky-700">Desde S/ 600/día</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Catálogo</h2>
+          <p class="mt-1 text-slate-600">Filtra por categoría o busca por nombre.</p>
+        </div>
+        <div class="flex gap-3">
+          <select id="filtro" class="px-3 py-2 rounded-xl border bg-white text-sm">
+            <option value="">Todas las categorías</option>
+            <option>Bombas de concreto</option>
+            <option>Movimiento de tierra</option>
+            <option>Compactación</option>
+            <option>Elevación</option>
+            <option>Transporte</option>
+          </select>
+          <input id="busqueda" type="search" placeholder="Buscar equipo..." class="px-3 py-2 rounded-xl border bg-white text-sm w-56"/>
+        </div>
+      </div>
+      <div id="grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="py-16 bg-white border-y">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+      <div class="rounded-2xl border p-6">
+        <div class="text-3xl">⏱️</div>
+        <h3 class="mt-3 font-bold text-lg">Disponibilidad inmediata</h3>
+        <p class="text-slate-600">Programación 24/7 y despacho el mismo día según stock.</p>
+      </div>
+      <div class="rounded-2xl border p-6">
+        <div class="text-3xl">🛡️</div>
+        <h3 class="mt-3 font-bold text-lg">Operador y seguro</h3>
+        <p class="text-slate-600">Personal certificado, mantenimiento y cobertura incluida.</p>
+      </div>
+      <div class="rounded-2xl border p-6">
+        <div class="text-3xl">💬</div>
+        <h3 class="mt-3 font-bold text-lg">Cotiza por WhatsApp</h3>
+        <p class="text-slate-600">Resolvemos dudas y coordinamos visita técnica sin costo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / COTIZACIÓN -->
+  <section id="cotiza" class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border bg-white p-6 sm:p-10 shadow-sm">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Solicita tu cotización</h2>
+        <p class="mt-1 text-slate-600">Completa el formulario y genera un mensaje listo para enviar por WhatsApp.</p>
+        <form id="form" class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium">Equipo</label>
+            <select id="equipo" class="mt-1 w-full px-3 py-2 rounded-xl border bg-white">
+              <option>Bomba Estacionaria</option>
+              <option>Bomba Telescópica 36 m</option>
+              <option>Mixer 8 m³</option>
+              <option>Excavadora 20T</option>
+              <option>Retroexcavadora 4x4</option>
+              <option>Rodillo 12T</option>
+              <option>Plataforma 18 m</option>
+              <option>Camión cama baja 30T</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Fecha inicio</label>
+            <input id="fecha" type="date" class="mt-1 w-full px-3 py-2 rounded-xl border bg-white"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Ciudad</label>
+            <input id="ciudad" placeholder="Lima / Arequipa / ..." class="mt-1 w-full px-3 py-2 rounded-xl border bg-white"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Horas / Días</label>
+            <input id="duracion" placeholder="8 horas / 1 día / 1 mes" class="mt-1 w-full px-3 py-2 rounded-xl border bg-white"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Volumen m³ (si aplica)</label>
+            <input id="volumen" placeholder="Ej: 60" class="mt-1 w-full px-3 py-2 rounded-xl border bg-white"/>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium">Observaciones</label>
+            <textarea id="obs" rows="3" placeholder="Accesos, tipo de obra, altura de bombeo, etc." class="mt-1 w-full px-3 py-2 rounded-xl border bg-white"></textarea>
+          </div>
+          <div class="sm:col-span-2 flex flex-wrap gap-3 pt-2">
+            <button type="button" onclick="genWhats()" class="px-5 py-3 rounded-xl bg-sky-600 text-white hover:bg-sky-700">Generar WhatsApp</button>
+            <a id="whatsLink" href="#" target="_blank" class="px-5 py-3 rounded-xl border">Abrir WhatsApp</a>
+          </div>
+          <p class="text-xs text-slate-500 sm:col-span-2">Al enviar, aceptas nuestras condiciones y el tratamiento de datos para fines de coordinación comercial.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO SIMPLE -->
+  <section id="contacto" class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Contacto</h2>
+        <ul class="mt-4 space-y-2 text-slate-700">
+          <li>📞 <a href="tel:+51999999999" class="hover:underline">+51 999 999 999</a></li>
+          <li>✉️ <a href="mailto:ventas@betonmix.pe" class="hover:underline">ventas@betonmix.pe</a></li>
+          <li>📍 Lima — Arequipa — Sur</li>
+          <li>🕘 Lun–Sáb 7:00–19:00</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border bg-white p-6">
+        <h3 class="font-bold">¿Necesitas asesoría técnica?</h3>
+        <p class="text-slate-600 mt-1">Envíanos tu plano o metrado y te ayudamos a elegir el equipo.</p>
+        <a href="#cotiza" class="mt-4 inline-flex px-4 py-2 rounded-xl bg-slate-900 text-white">Solicitar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Betonmix. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Datos de ejemplo (puedes editar nombres, specs y precios)
+    const equipos = [
+      { id: 1, nombre:"Bomba Estacionaria", cat:"Bombas de concreto", precio:"S/ 30 por m³", desc:"Hasta 400 m de línea y 150 bar.", img:"", specs:["DN125", "Motor diésel", "2 ayudantes"] },
+      { id: 2, nombre:"Bomba Telescópica 36 m", cat:"Bombas de concreto", precio:"S/ 1,800/día", desc:"Alcance 36 m, montaje rápido.", img:"", specs:["4 secciones", "Caudal 90 m³/h"] },
+      { id: 3, nombre:"Mixer 8 m³", cat:"Transporte", precio:"Consultar", desc:"Transporte de concreto premezclado.", img:"", specs:["Chasis 6x4", "GPS"] },
+      { id: 4, nombre:"Excavadora 20T", cat:"Movimiento de tierra", precio:"S/ 1,200/día", desc:"Cuchara 1 m³.", img:"", specs:["Cabina A/C", "Martillo opcional"] },
+      { id: 5, nombre:"Retroexcavadora 4x4", cat:"Movimiento de tierra", precio:"S/ 700/día", desc:"Brazo extensible.", img:"", specs:["Herramientas varias"] },
+      { id: 6, nombre:"Rodillo 12T", cat:"Compactación", precio:"S/ 700/día", desc:"Vibratorio, tándem.", img:"", specs:["Ancho 1.9 m"] },
+      { id: 7, nombre:"Plataforma Elevadora 18 m", cat:"Elevación", precio:"S/ 600/día", desc:"Eléctrica, tijera.", img:"", specs:["Trabajo interior/exterior"] },
+      { id: 8, nombre:"Camión cama baja 30T", cat:"Transporte", precio:"S/ 1,900/viaje", desc:"Lowboy 30 toneladas.", img:"", specs:["Rampa hidráulica"] }
+    ];
+
+    const phone = "+51999999999"; // <-- Cambia al WhatsApp real
+
+    const grid = document.getElementById('grid');
+    const filtro = document.getElementById('filtro');
+    const busqueda = document.getElementById('busqueda');
+
+    function render(){
+      const q = busqueda.value.toLowerCase();
+      const f = filtro.value;
+      const list = equipos.filter(e => (!f || e.cat===f) && (!q || e.nombre.toLowerCase().includes(q)));
+      grid.innerHTML = list.map(e => `
+        <article class="rounded-2xl border bg-white p-5 shadow-sm flex flex-col">
+          <div class="aspect-[16/10] rounded-xl bg-slate-100 flex items-center justify-center text-slate-400">Imagen</div>
+          <h3 class="mt-4 text-lg font-bold">${e.nombre}</h3>
+          <p class="text-sm text-slate-600">${e.desc}</p>
+          <div class="mt-3 text-sm font-semibold text-sky-700">${e.precio}</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-1">${e.specs.map(s=>`<li>• ${s}</li>`).join('')}</ul>
+          <div class="mt-4 flex gap-2">
+            <a class="px-4 py-2 rounded-xl bg-sky-600 text-white hover:bg-sky-700" href="${waURL(`Hola, necesito ${e.nombre}.`)}" target="_blank">Cotizar</a>
+            <button class="px-4 py-2 rounded-xl border" onclick='prefill("${e.nombre}")'>Agregar al formulario</button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function waURL(text){
+      const u = new URL("https://wa.me/" + phone.replace(/[^\d]/g, ''));
+      u.searchParams.set('text', text);
+      return u.toString();
+    }
+
+    function prefill(nombre){
+      document.getElementById('equipo').value = nombre;
+      window.location.hash = '#cotiza';
+    }
+
+    function genWhats(){
+      const equipo = document.getElementById('equipo').value;
+      const fecha  = document.getElementById('fecha').value;
+      const ciudad = document.getElementById('ciudad').value;
+      const dur    = document.getElementById('duracion').value;
+      const vol    = document.getElementById('volumen').value;
+      const obs    = document.getElementById('obs').value;
+
+      let msg = `Hola, quisiera cotizar: ${equipo}.`;
+      if (fecha) msg += `\nFecha: ${fecha}`;
+      if (ciudad) msg += `\nCiudad: ${ciudad}`;
+      if (dur) msg += `\nDuración: ${dur}`;
+      if (vol) msg += `\nVolumen m³: ${vol}`;
+      if (obs) msg += `\nNotas: ${obs}`;
+
+      const link = waURL(msg);
+      document.getElementById('whatsLink').href = link;
+      document.getElementById('whatsLink').classList.remove('pointer-events-none','opacity-50');
+    }
+
+    // Header logic
+    function toggleMenu(show){
+      document.getElementById('mobileMenu').classList.toggle('hidden', show===false ? true : undefined);
+    }
+    document.getElementById('openMenu').addEventListener('click', ()=>toggleMenu());
+    document.getElementById('closeMenu').addEventListener('click', ()=>toggleMenu(false));
+
+    // Initial state
+    filtro.addEventListener('change', render);
+    busqueda.addEventListener('input', render);
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('ctaWhats').href = waURL('Hola, quiero cotizar alquiler de maquinaria.');
+    render();
+  </script>
+</body>
+</html>
